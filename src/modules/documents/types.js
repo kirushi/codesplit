@@ -1,0 +1,1 @@
+export const FETCH_DOCUMENTS = 'app/documents/fetch_documents';

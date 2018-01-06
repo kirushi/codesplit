@@ -1,0 +1,1 @@
+export const FETCH_WORKSPACES = 'app/workspaces/fetch_workspaces';
