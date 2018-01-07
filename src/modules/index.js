@@ -1,28 +1,31 @@
-import { all } from 'redux-saga/effects';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import createSagaMiddleware from 'redux-saga';
-import * as documents from './documents';
-import * as workspaces from './workspaces';
+import {
+    all
+} from 'redux-saga/effects';
+import {
+    combineReducers
+} from 'redux';
+import {
+    documentSagas,
+    documents
+} from './documents';
+import {
+    workspaceSagas,
+    workspaces
+} from './workspaces';
 
 const rootReducer = combineReducers({
-    documents: documents.reducer,
-    workspaces: workspaces.reducer,
+    documents,
+    workspaces,
 });
 
-export function* rootSaga() {
+function* allSagas() {
     yield all([
-        ...documents.saga,
-        ...workspaces.saga,
+        ...documentSagas,
+        ...workspaceSagas,
     ]);
 };
 
-export const configureStore = (initialState) => {
-    const sagaMiddleware = createSagaMiddleware();
-    const store = createStore(
-        rootReducer,
-        initialState,
-        applyMiddleware(sagaMiddleware),
-    );
-    sagaMiddleware.run(rootSaga);
-    return store;
-};
+export {
+    rootReducer,
+    allSagas,
+}

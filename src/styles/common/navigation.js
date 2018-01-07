@@ -56,3 +56,40 @@ export const NavListItem = styled(NavLink).attrs({
         background-color: rgba(54, 99, 58, 0.25);
     }
 `;
+
+
+export const TabbedNavList = styled.ul`
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        display: inline-block;
+        vertical-align: top;
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+`;
+
+export const TabbedNavListItem = styled(NavLink).attrs({
+    activeClassName
+})`
+    color: ${props => props.theme.blue};
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding: 1.0em;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.1428571428571428;
+    border-bottom: 3px solid transparent;
+
+    &:hover {
+        border-bottom: 3px solid ${props => props.theme.blue};
+    }
+  
+    &.${activeClassName} {
+        border-bottom: 3px solid ${props => props.theme.blue};
+    }
+`;

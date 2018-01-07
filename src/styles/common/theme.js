@@ -10,4 +10,5 @@ export const theme = {
     primary: colors.green,
     secondary: colors.orange,
     ternary: colors.white,
+    ...colors,
 };

@@ -1,6 +1,11 @@
 import React from 'react';
-import { H3 } from '../styles/common';
+import { NavigationWorkspace } from '../common';
+import { RoutesWorkspace } from '../routes';
+import { ContainerPadded } from '../styles';
 
 export const Workspace = () => (
-    <H3>Workspace</H3>
+    <ContainerPadded>
+        <NavigationWorkspace />
+        <RoutesWorkspace />
+    </ContainerPadded>
 );
