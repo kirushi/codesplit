@@ -16,4 +16,4 @@ ContainerWorkspaceProcesses = connect((state) => {
     };
 })(ContainerWorkspaceProcesses);
 
-export { ContainerWorkspaceProcesses };
+export default ContainerWorkspaceProcesses;

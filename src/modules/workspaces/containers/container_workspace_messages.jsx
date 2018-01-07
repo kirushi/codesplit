@@ -16,4 +16,4 @@ ContainerWorkspaceMessages = connect((state) => {
     };
 })(ContainerWorkspaceMessages);
 
-export { ContainerWorkspaceMessages };
+export default ContainerWorkspaceMessages;

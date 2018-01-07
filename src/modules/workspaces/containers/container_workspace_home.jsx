@@ -4,7 +4,7 @@ import { fetchWorkspaces } from '../actions';
 import { H3, H6 } from '../../../styles';
 
 class ContainerWorkspaceHome extends Component {
-    componentDidMount() {
+    componentWillMount() {
         this.props.fetchWorkspaces();
     }
 
@@ -30,4 +30,4 @@ ContainerWorkspaceHome = connect((state) => {
     };
 }, { fetchWorkspaces })(ContainerWorkspaceHome);
 
-export { ContainerWorkspaceHome };
+export default ContainerWorkspaceHome;

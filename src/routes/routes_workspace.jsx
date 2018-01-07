@@ -1,18 +1,18 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import {
-    ContainerWorkspaceHome,
-    ContainerWorkspaceDocuments,
-    ContainerWorkspaceMessages,
-    ContainerWorkspaceProcesses,
-} from '../modules/workspaces/containers';
+    WorkspaceHome,
+    WorkspaceDocuments,
+    WorkspaceMessages,
+    WorkspaceProcesses,
+} from '../modules/workspaces/loaders';
 
 export const RoutesWorkspace = () => (
     <Switch>
-        <Route exact path='/workspace' component={ContainerWorkspaceHome} />
-        <Route path='/workspace/home' component={ContainerWorkspaceHome} />
-        <Route path='/workspace/documents' component={ContainerWorkspaceDocuments} />
-        <Route path='/workspace/processes' component={ContainerWorkspaceProcesses} />
-        <Route path='/workspace/messages' component={ContainerWorkspaceMessages} />
+        <Route exact path='/workspace' component={WorkspaceHome} />
+        <Route path='/workspace/home' component={WorkspaceHome} />
+        <Route path='/workspace/documents' component={WorkspaceDocuments} />
+        <Route path='/workspace/processes' component={WorkspaceProcesses} />
+        <Route path='/workspace/messages' component={WorkspaceMessages} />
     </Switch>
 );

@@ -16,4 +16,4 @@ ContainerWorkspaceDocuments = connect((state) => {
     };
 })(ContainerWorkspaceDocuments);
 
-export { ContainerWorkspaceDocuments };
+export default ContainerWorkspaceDocuments;
